@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تهنئة يوم التمريض</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; background-color: #e3f2fd; color: #1a237e; padding: 50px 20px; }
+        .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: inline-block; max-width: 500px; width: 100%; border-top: 8px solid #1976d2; }
+        h1 { color: #1565c0; margin-bottom: 20px; }
+        input { padding: 12px; border: 2px solid #bbdefb; border-radius: 10px; width: 80%; font-size: 16px; margin-bottom: 20px; outline: none; }
+        button { padding: 12px 30px; background-color: #1976d2; color: white; border: none; border-radius: 10px; cursor: pointer; font-size: 16px; font-weight: bold; transition: 0.3s; }
+        button:hover { background-color: #0d47a1; }
+        #result { margin-top: 30px; font-size: 24px; line-height: 1.6; }
+        .footer { margin-top: 20px; font-size: 14px; color: #546e7a; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>كُل عام وأنتم فخر الوطن 🩺</h1>
+        <p>بمناسبة يوم التمريض العالمي، أدخل اسمك لتلقي التهنئة:</p>
+        <input type="text" id="nameInput" placeholder="اكتب الاسم هنا...">
+        <br>
+        <button onclick="showGreeting()">عرض التهنئة</button>
+        <div id="result"></div>
+        <div class="footer">شعارنا: "ممرضينا.. مستقبلنا"</div>
+    </div>
+
+    <script>
+        function showGreeting() {
+            const name = document.getElementById('nameInput').value;
+            const result = document.getElementById('result');
+            if(name.trim() !== "") {
+                result.innerHTML = `<strong>شكراً لك يا ${name}</strong><br>على عطائك وتفانيك في مهنة الإنسانية. دمتم ذخراً للوطن! 💙`;
+            } else {
+                alert("لطفاً، ادخل الاسم أولاً");
+            }
+        }
+    </script>
+</body>
+</html>
